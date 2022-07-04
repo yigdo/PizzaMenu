@@ -18,3 +18,5 @@ function SwitchPricing() {
   pricingContainer.style.display = "block";
   ingredientsContainer.style.display = "none";
 }
+
+

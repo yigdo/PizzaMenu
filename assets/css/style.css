@@ -44,3 +44,19 @@ body {}
        right:0px;
        transform: translateY(-40px);
 }
+.new-icon{
+       background-color: red;
+       color: white;
+       border-radius: 30px;
+       padding: 5px;
+       font-size: 10px;
+       font-family: sans-serif;
+}
+
+.main{
+       display: flex;
+       justify-content: center;
+}
+header{
+       margin:20px;
+}
