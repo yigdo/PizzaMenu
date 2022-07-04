@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Pizza Menu</title>
+  </head>
+  <body>
+    <!-- #region Menu -->
+    <div class="sticky-top">
+      <nav class="navbar-dark navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Pizza Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+             <!--  <li class="nav-item">
+                <a class="nav-link" href="customize.html">Customize</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About Us
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- #endregion -->
+    <!-- #region Main -->
+    <div class="main">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            onclick="SwitchIngredients()"
+            id="ingredientsLink"
+            >Ingredients</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            onclick="SwitchPricing()"
+            id="pricingLink"
+            >Pricing</a
+          >
+        </li>
+      </ul>
+      <div class="menu-ingredients" id="ingredients-container">
+        <ul>
+          <li>
+            <div class="menu-card">
+              <div class="menu-card-header">
+                Margherita
+                <div class="menu-card-pizza">
+                  <img
+                    class="menu-card-pizza-img"
+                    src="./assets/img/pizza/margherita-2.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="menu-card-text">Tomatoes, Mozarella</div>
+            </div>
+            <hr />
+          </li>
+          <li>
+            <div class="menu-card">
+              <div class="menu-card-header">
+                Prosciutto e funghi
+                <div class="menu-card-pizza">
+                  <img
+                    class="menu-card-pizza-img"
+                    src="./assets/img/pizza/Prosciuttofunghi.jpeg
+                     "
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="menu-card-text">
+                Flour, Tomato, Mozerella, Mushrooms, Prosciutto Cotta
+              </div>
+            </div>
+            <hr />
+          </li>
+        </ul>
+      </div>
+      <div class="menu-pricing" id="pricing-container">
+        <ul>
+          <li>
+            <div class="menu-card">
+              <div class="menu-card-header">
+                Margherita
+                <div class="menu-card-pizza">
+                  <img
+                    class="menu-card-pizza-img"
+                    src="./assets/img/pizza/margherita-2.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="menu-card-text">10$</div>
+            </div>
+            <hr />
+          </li>
+          <li>
+            <div class="menu-card">
+              <div class="menu-card-header">
+                Prosciutto e funghi
+                <div class="menu-card-pizza">
+                  <img
+                    class="menu-card-pizza-img"
+                    src="./assets/img/pizza/Prosciuttofunghi.jpeg
+                     "
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="menu-card-text">15$</div>
+            </div>
+            <hr />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- #endregion -->
+    <!-- #region Footer -->
+    <footer class="text-center text-white" style="background-color: #caced1">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Images -->
+        <section class="">
+          <div class="row">
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+              <div
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Images -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-white" href="https://github.com/yigdo">Yigdo</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- #endregion  -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

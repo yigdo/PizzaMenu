@@ -1,0 +1,46 @@
+body {}
+
+.main-bg {
+       background-image: url("../img/pizza-bg-2.jpeg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: white;
+       width: 100%;
+       height: 500px;
+}
+
+.menu-bar {
+       background-color: rgb(255, 203, 100);
+}
+
+.menu-card {
+       color: rgb(111, 111, 111);
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu-ingredients>ul,
+.menu-pricing>ul {
+       list-style: none;
+}
+
+.menu-card-header {
+       font-size: 25px;
+       display: inline;
+}
+
+.menu-card-text {
+       font-size: 15px;
+}
+
+.menu-card-pizza-img {
+       border-radius: 50%;
+       height: 75px;
+       width: 75px;
+       float:right;
+       position: absolute;
+       right:0px;
+       transform: translateY(-40px);
+}
