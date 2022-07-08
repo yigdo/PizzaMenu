@@ -7,7 +7,7 @@ A pretty basic pizza menu app with customize your own pizza future and checkout 
  - [assets/bootstrap/*](https://github.com/yigdo/PizzaMenu/tree/main/assets/bootstrap) : [Bootstrap](getbootstrap.com) Library
  - [assets/css/*](https://github.com/yigdo/PizzaMenu/tree/main/assets/css) : Custom css
   - [assets/js/*](https://github.com/yigdo/PizzaMenu/tree/main/assets/js) : Custom js
-  - [assets/img/*](https://github.com/yigdo/PizzaMenu/tree/main/assets/css) : Images
+  - [assets/img/*](https://github.com/yigdo/PizzaMenu/tree/main/assets/img) : Images
    - [*](https://github.com/yigdo/PizzaMenu/tree/main/) : Root Directory
 
 ### Installation
