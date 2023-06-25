@@ -1,308 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
-    />
-    <title>Customize Pizza</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="menu.html"
-          ><i class="bi bi-arrow-90deg-left"></i> Back </a>
-          <div>
-          <a href="" class="text-white text-decoration-none " onclick="emptyBucket();"><button class="btn btn-danger"><i class="bi bi-trash"></i> Delete</button></a>
-          <a href="checkout.html" class="text-white text-decoration-none "><button class="btn btn-primary">Checkout</button></a>
-          </div>
-        
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  <title>Customize Pizza</title>
+  <style>
+    .card-img-top{
+      min-height:120px;
+      max-height:120px; 
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="menu.html"><i class="bi bi-arrow-90deg-left"></i> Back </a>
+      <div>
+        <a href="" class="text-white text-decoration-none " onclick="emptyBucket();"><button class="btn btn-danger"><i
+              class="bi bi-trash"></i> Delete</button></a>
+        <a href="checkout.html" class="text-white text-decoration-none "><button
+            class="btn btn-primary">Checkout</button></a>
       </div>
-    </nav>
-    <div class="alert alert-success" role="alert" id="alert" style="display: none;">
-        A simple success alert—check it out!
-    </div> 
-    <header>
-      <h3>Make Your Pizza</h3>
-    </header>
-    <div class="main">
-      <div class="accordion accordion-flush w-50" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne"
-              aria-expanded="false"
-              aria-controls="flush-collapseOne"
-            >
-              Crust
-            </button>
-          </h2>
-          <div
-            id="flush-collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/crust/thin.jpeg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h6 class="card-title">Thin Crust 1$</h6>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaCrust('thin')">Add</a>
-                </div>
+
+    </div>
+  </nav>
+  <div class="alert alert-success" role="alert" id="alert" style="display: none;">
+    Topping added successfully!
+  </div>
+  <header>
+    <h3>Make Your Pizza</h3>
+  </header>
+  <div class="main">
+    <div class="accordion accordion-flush w-50" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Crust
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/crust/thin.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h6 class="card-title">Thin Crust 1$</h6>
+                <a href="#" class="btn btn-primary" onclick="addPizzaCrust('thin')">Add</a>
               </div>
-               <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/crust/thick.jpeg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h6 class="card-title">Thick Crust 2$</h6>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaCrust('thick')">Add</a>
-                </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/crust/thick.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h6 class="card-title">Thick Crust 2$</h6>
+                <a href="#" class="btn btn-primary" onclick="addPizzaCrust('thick')">Add</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTwo"
-              aria-expanded="false"
-              aria-controls="flush-collapseTwo"
-            >
-              Sauce
-            </button>
-          </h2>
-          <div
-            id="flush-collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/sauce/tomato.jpeg" class="card-img-top" alt="..." height="120px;" />
-                <div class="card-body">
-                  <h5 class="card-title">Tomato Sauce 2$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaSauce('tomato')">Add</a>
-                </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Sauce
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/sauce/tomato.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Tomato Sauce 2$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaSauce('tomato')">Add</a>
+              </div>
             </div>
-              <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/sauce/cheese.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Cheese Sauce 3$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaSauce('cheese')">Add</a>
-                </div>
-            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/sauce/cheese.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Cheese Sauce 3$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaSauce('cheese')">Add</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseThree"
-              aria-expanded="false"
-              aria-controls="flush-collapseThree"
-            >
-              Toppings
-            </button>
-          </h2>
-          <div
-            id="flush-collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingThree"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-                 <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/tuna.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Tuna 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Tuna')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/ham.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Ham 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Ham')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/pineapple.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Pineapple 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Pineapple')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/pepperoni.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Pepperoni 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Pepperoni')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/onion.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Onion 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Onion')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/ollive.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Ollive 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Ollive')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/blackollive.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Black Olive 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('BlackOllive')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/corn.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title ">Corn 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Corn')">Add</a>
-                </div>
-                </div>
-                  <div class="card" style="width: 10rem; display:inline-block;">
-                <img src="./assets/img/customize/toppings/capers.jpeg" class="card-img-top" alt="..." height="120px;"/>
-                <div class="card-body">
-                  <h5 class="card-title">Capers 1$</h5>
-                  <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Capers')">Add</a>
-                </div>
-                </div>
-                  
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Toppings
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/tuna.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Tuna 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Tuna')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/ham.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Ham 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Ham')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/pineapple.jpeg" class="card-img-top" alt="..."
+                height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Pineapple 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Pineapple')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/pepperoni.jpeg" class="card-img-top" alt="..."
+                height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Pepperoni 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Pepperoni')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/onion.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Onion 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Onion')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/ollive.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Ollive 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Ollive')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/blackollive.jpeg" class="card-img-top" alt="..."
+                height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Black Olive 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('BlackOllive')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/corn.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title ">Corn 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Corn')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/capers.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Capers 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Capers')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/mushroom.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Mushroom 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Mushroom')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/mozzerella.jpeg" class="card-img-top" alt="..."
+                height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Mozzerella 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Mozzerella')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/artichoke.jpeg" class="card-img-top" alt="..."
+                height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Artichoke 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Artichoke')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/pestodrizzle.jpeg" class="card-img-top" alt="..."
+                height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Pesto Drizl.. 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('PestoDrizzle')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/shrimp.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Shrimp 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Shrimp')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/sausage.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Sausage 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Sausage')">Add</a>
+              </div>
+            </div>
+            <div class="card" style="width: 10rem; display:inline-block;">
+              <img src="./assets/img/customize/toppings/prosicutto.jpeg" class="card-img-top" alt="..." height="120px;" />
+              <div class="card-body">
+                <h5 class="card-title">Prosicutto 1$</h5>
+                <a href="#" class="btn btn-primary" onclick="addPizzaToppings('Prosicutto')">Add</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <!-- #region Footer -->
-    <footer class="text-center text-white" style="background-color: #caced1">
-      <!-- Grid container -->
-      <div class="container p-4">
-        <!-- Section: Images -->
-        <section class="">
-          <div class="row">
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2)"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2)"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2)"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2)"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2)"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2)"
-                  ></div>
-                </a>
-              </div>
+  <!-- #region Footer -->
+  <footer class="text-center text-white" style="background-color: #caced1">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row">
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
             </div>
           </div>
-        </section>
-        <!-- Section: Images -->
-      </div>
-      <!-- Grid container -->
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="./assets/img/pizza-bg.jpeg" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+    </div>
+    <!-- Grid container -->
 
-      <!-- Copyrights -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2022 Copyright:
-        <a class="text-white" href="https://github.com/yigdo">Yigdo</a>
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- #endregion  -->
-    <script src="./assets/js/customize.js "></script>
-    <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
-  </body>
+    <!-- Copyrights -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2022 Copyright:
+      <a class="text-white" href="https://github.com/yigdo">Yigdo</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- #endregion  -->
+  <script src="./assets/js/customize.js "></script>
+  <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
 </html>
